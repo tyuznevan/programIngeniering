@@ -1,5 +1,10 @@
 import pytest
-from ..postfix import evaluate_expression  # Импорт вашей функции
+import sys
+
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))  # Автоматически найдёт корень
+
+from postfix import evaluate_expression
 
 class TestExpressionEvaluator:
     def test_simple_addition(self):
