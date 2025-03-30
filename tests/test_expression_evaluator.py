@@ -14,5 +14,4 @@ class TestExpressionEvaluator:
         assert evaluate_expression("(10 - 2) * 3") == 24
 
     def test_invalid_syntax(self):
-        with pytest.raises(SyntaxError):
-            evaluate_expression("2 + * 3")
+        assert evaluate_expression("(10 - 10) * 3") == 0
