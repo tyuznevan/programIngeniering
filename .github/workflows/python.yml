@@ -26,4 +26,4 @@ jobs:
     - name: Run tests
       run: |
         python -m pytest tests/  # Если есть тесты
-        python main.py          # Запуск основной программы
+        python postfix.py          # Запуск основной программы
