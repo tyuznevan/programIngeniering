@@ -1,5 +1,5 @@
 import pytest
-from postfix import evaluate_expression  # Импорт вашей функции
+from ..postfix import evaluate_expression  # Импорт вашей функции
 
 class TestExpressionEvaluator:
     def test_simple_addition(self):
