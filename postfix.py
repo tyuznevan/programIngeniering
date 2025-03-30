@@ -9,7 +9,7 @@ def evaluate_expression(expr):
         if expr[i] == ' ':
             i += 1
             continue
-
+error
         # Если цифра или точка (вещественное число)
         if expr[i].isdigit() or expr[i] == '.':
             num = ''
