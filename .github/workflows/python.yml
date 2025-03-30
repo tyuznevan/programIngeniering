@@ -19,4 +19,4 @@ jobs:
           
       - name: Run Python file
         run: |
-          python ваш_файл.py  # Замените на имя вашего файла!
+          python postfix.py  # Замените на имя вашего файла!
