@@ -1,0 +1,29 @@
+# .github/workflows/python.yml
+name: Python CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install pytest
+        pip install -r requirements.txt  # Если у вас есть зависимости
+    
+    - name: Run tests
+      run: |
+        python -m pytest tests/  # Если есть тесты
+        python main.py          # Запуск основной программы
