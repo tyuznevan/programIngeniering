@@ -1,0 +1,24 @@
+name: Code Change Build
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - '**.py'    # Триггер только для изменений в .py файлах
+      - '!README.md'  # Игнорирует изменения в README
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        if: contains(github.event.head_commit.modified, '.py')  # Доп. проверка для Python
+        with:
+          python-version: '3.11'
+
+      - name: Run Python check
+        if: contains(github.event.head_commit.modified, '.py')
+        run: python postfix.py  # Замените на ваш файл
