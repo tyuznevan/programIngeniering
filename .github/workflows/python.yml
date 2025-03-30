@@ -10,7 +10,6 @@ jobs:
   check-run:
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
       - uses: actions/checkout@v4  # Клонирует репозиторий
       
       - name: Set up Python
@@ -20,13 +19,4 @@ jobs:
           
       - name: Run Python file
         run: |
-          python postfix.py  # Замените на имя вашего файла!
-=======
-    - uses: actions/checkout@v4
-    
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-
->>>>>>> 9be50150261c57b7697b4fe8855ddaece88cde9c
+          python ваш_файл.py  # Замените на имя вашего файла!
