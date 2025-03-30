@@ -1,19 +1,32 @@
-# .github/workflows/python.yml
-name: Python CI
+name: Run Check
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["*"]  # Проверяет все ветки
   pull_request:
-    branches: [ "main" ]
+    branches: ["*"]
 
 jobs:
-  test:
+  check-run:
     runs-on: ubuntu-latest
     steps:
+<<<<<<< HEAD
+      - uses: actions/checkout@v4  # Клонирует репозиторий
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          
+      - name: Run Python file
+        run: |
+          python postfix.py  # Замените на имя вашего файла!
+=======
     - uses: actions/checkout@v4
     
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
+
+>>>>>>> 9be50150261c57b7697b4fe8855ddaece88cde9c
